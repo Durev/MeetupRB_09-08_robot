@@ -8,7 +8,8 @@ class Robot
 	end
 
 	def orient(arg)
-		puts arg
+		raise ArgumentError unless arg == :north || arg == :south || arg == :east || arg == :west
+		self.bearing = arg
 	end
 
 end
